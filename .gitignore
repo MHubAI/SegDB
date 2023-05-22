@@ -1,0 +1,5 @@
+.vscode
+**/__pycache__
+segdb.egg-info
+ymldicomseg
+notes.md
