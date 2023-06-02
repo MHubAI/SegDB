@@ -24,7 +24,7 @@ With MHub, we want to encourage everyone to become familiar with these standards
 pip install git+https://github.com/MHubAI/segdb.git
 ```
 
-## Usage
+## Lookup segmentations
 
 Use the `segdb.lookup` tool to search for segmentations by specifying space-separated keywords as arguments.
 By default, it searches for segmentations that contain all the specified keywords. To search for segmentations containing at least one of the keywords, add the argument `--or`.
@@ -40,7 +40,7 @@ python -m segdb.lookup left lung
 python -m segdb.lookup --or lung heart 
 ```
 
-## Generate a DCMQU Json Generation file
+## Generate a DCMQI json config file
 
 In the following example, `My Model` is an AI model that segments the whole heart. It reads a CT scan as a DICOM image from `path/to/dicom` and creates a NIFTI file at `path/to/segmentation.nii.gz` that contains the binary heart segmentation.
 To generate the DCMQI meta JSON, we use the `DcmqiDsegConfigGenerator` class from the `segdb.tools` module.

@@ -3,3 +3,9 @@
 segdb.egg-info
 ymldicomseg
 notes.md
+data_bak/
+example_data/
+experiments/
+segdb/tools/generator.py
+segdb/tools/generator2.py
+segdb/tools/importer.py
