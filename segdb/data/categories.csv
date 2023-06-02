@@ -1,0 +1,4 @@
+id,CodeValue,CodingSchemeDesignator,CodeMeaning
+C_BODY_STRUCTURE,123037004,SCT,Body structure
+C_TISSUE_STRUCTURE,85756007,SCT,Body tissue structure
+C_MORPHOLOGICALLY_ABNORMAL_STRUCTURE,49755003,SCT,Morphologically abnormal structure
