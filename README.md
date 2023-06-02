@@ -77,3 +77,9 @@ itkimage2segimage
  --outputDICOM my/standardized/heart_seg.dcm
  --inputMetadata path/to/meta.json
 ```
+
+## Definition of embedded structures
+
+Some structures that we can segment are embedded in an anatomical structure, such as tissue abnormalities like tumors or cardiac calcifications.
+
+For example, a primary tumor (malignant neoplasm) in the liver is defined by the delineated structure (the tumor) with the ID `NEOPLASM_MALIGNANT_PRIMARY` and is embedded in a context organ (the liver) with the ID `LIVER`. To annotate such a structure, combine both IDs with a `+` sign, with the ID of the anatomical structure before and the ID of the embedded structure after the plus sign: `LIVER+NEOPLASM_MALIGNANT_PRIMARY`.
