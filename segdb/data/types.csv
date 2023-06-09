@@ -18,6 +18,7 @@ T_BONE_HUMERUS_STRUCTURE,85050009,SCT,Bone structure of humerus
 T_ILIAC_ARTERY_COMMON_STRUCTURE,73634005,SCT,Common iliac artery structure
 T_ILIAC_VEIN_COMMON_STRUCTURE,46027005,SCT,Structure of common iliac vein
 T_INFERIOR_VENA_CAVA_STRUCTURE,64131007,SCT,Inferior vena cava structure
+T_SUPERIOR_VENA_CAVA_STRUCTURE,48345005,SCT,Superior vena cava structure
 T_KIDNEY_STRUCTURE,64033007,SCT,Kidney structure
 T_LIVER_STRUCTURE,10200004,SCT,Liver structure
 T_LUNG_LOBE_LOWER_STRUCTURE,90572001,SCT,Structure of lower lobe of lung
@@ -36,5 +37,12 @@ T_BLADDER_STRUCTURE,89837001,SCT,Urinary bladder structure
 T_NEOPLASM_MALIGNANT_PRIMARY,86049000,SCT,"Neoplasm, malignant (primary)"
 T_ARTERY_CORONARY_CFLX_LEFT_STRUCTURE,59438005,SCT,Structure of circumflex branch of left coronary artery
 T_ARTERY_CORONARY_RIGHT_STRUCTURE,13647002,SCT,Right coronary artery structure
+T_ARTERY_CORONARY_LEFT_STRUCTURE,3227004,SCT,Structure of left main coronary artery
 T_ARTERY_CORONARY_AD_LEFT_STRUCTURE,59438005,SCT,Structure of left anterior descending artery
 T_HEART_STRUCTURE,80891009,SCT,Heart structure
+T_VALVE_AORTIC_STRUCTURE,34202007,SCT,Aortic valve structure
+T_VALVE_MITRAL_STRUCTURE,91134007,SCT,Mitral valve structure
+T_VALVE_PULMONARY_STRUCTURE,39057004,SCT,Pulmonary valve structure
+T_VALVE_TRICUSPID_STRUCTURE,46030003,SCT,Tricuspid valve structure
+T_NODE_SINOATRIAL_STRUCTURE,88210001,SCT,Structure of sinoatrial node
+T_NODE_ATRIOVENTRICULAR_STRUCTURE,25943004,SCT,Structure of atrioventricular node
