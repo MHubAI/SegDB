@@ -44,9 +44,11 @@ class DcmqiDsegConfigGenerator:
     item_fchk: List[str] = []
 
     model_name: str = 'MODEL NAME'
+    body_part_examined: str = 'WHOLEBODY'
 
-    def __init__(self, model_name: str) -> None:
+    def __init__(self, model_name: str, body_part_examined: str) -> None:
         self.model_name = model_name
+        self.body_part_examined = body_part_examined
 
     def addItem(self, file: str, segment_ids: List[str], model_name: str, validate: bool = True):
         item = Item(file, segment_ids, model_name)
@@ -65,7 +67,7 @@ class DcmqiDsegConfigGenerator:
         
         # header data
         json_meta = {
-            'BodyPartExamined': 'WHOLEBODY',
+            'BodyPartExamined': self.body_part_examined,
             'ClinicalTrialCoordinatingCenterName': 'dcmqi',
             'ClinicalTrialSeriesID': '0',
             'ClinicalTrialTimePointID': '1',
