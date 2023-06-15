@@ -21,8 +21,9 @@ T_INFERIOR_VENA_CAVA_STRUCTURE,64131007,SCT,Inferior vena cava structure
 T_SUPERIOR_VENA_CAVA_STRUCTURE,48345005,SCT,Superior vena cava structure
 T_KIDNEY_STRUCTURE,64033007,SCT,Kidney structure
 T_LIVER_STRUCTURE,10200004,SCT,Liver structure
+T_LUNG,39607008,SCT,Structure of lung
 T_LUNG_LOBE_LOWER_STRUCTURE,90572001,SCT,Structure of lower lobe of lung
-T_LUNG_LOBE_MIDLE_RIGHT_STRUCTURE,72481006,SCT,Structure of middle lobe of right lung
+T_LUNG_LOBE_MIDDLE_RIGHT_STRUCTURE,72481006,SCT,Structure of middle lobe of right lung
 T_LUNG_LOBE_UPPER_STRUCTURE,45653009,SCT,Structure of upper lobe of lung
 T_PANCREATIC_STRUCTURE,15776009,SCT,Pancreatic structure
 T_VENOUS_STRUCTURE,29092000,SCT,Venous structure
@@ -46,3 +47,46 @@ T_VALVE_PULMONARY_STRUCTURE,39057004,SCT,Pulmonary valve structure
 T_VALVE_TRICUSPID_STRUCTURE,46030003,SCT,Tricuspid valve structure
 T_NODE_SINOATRIAL_STRUCTURE,88210001,SCT,Structure of sinoatrial node
 T_NODE_ATRIOVENTRICULAR_STRUCTURE,25943004,SCT,Structure of atrioventricular node
+T_MUSCLE_BACK_AUTOCHTHONOUS_STRUCTURE,244849004,SCT,Autochthonous back muscle structure
+T_MUSCLE_GLUTEUS_MAXIMUS_STRUCTURE,181674001,SCT,Muscle structure of the gluteus maximus
+T_MUSCLE_GLUTEUS_MEDIUS_STRUCTURE,78333006,SCT,Muscle structure of the gluteus medius
+T_MUSCLE_GLUTEUS_MINIMUS_STRUCTURE,75297007,SCT,Muscle structure of the gluteus minumus
+T_MUSCLE_MYOCARDIUM_STRUCTURE,74281007,SCT,Muscle structure of the myocardium
+T_MUSCLE_ILIOPSOAS_STRUCTURE,68455001,SCT,Muscle structure of the iliopsoas
+T_BONE_HIP_STRUCTURE,29836001,SCT,Bone structure of the hip
+T_BONE_RIB_1_STRUCTURE,48535007,SCT,Bone structure of first rib
+T_BONE_RIB_2_STRUCTURE,78247007,SCT,Bone structure of second rib
+T_BONE_RIB_3_STRUCTURE,25888004,SCT,Bone structure of third rib
+T_BONE_RIB_4_STRUCTURE,25523003,SCT,Bone structure of fourth rib
+T_BONE_RIB_5_STRUCTURE,15339008,SCT,Bone structure of fifth rib
+T_BONE_RIB_6_STRUCTURE,59558009,SCT,Bone structure of sixth rib
+T_BONE_RIB_7_STRUCTURE,24915002,SCT,Bone structure of seventh rib
+T_BONE_RIB_8_STRUCTURE,5953002,SCT,Bone structure of eight rib
+T_BONE_RIB_9_STRUCTURE,22565002,SCT,Bone structure of ninth rib
+T_BONE_RIB_10_STRUCTURE,77644006,SCT,Bone structure of tenth rib
+T_BONE_RIB_11_STRUCTURE,58830002,SCT,Bone structure of eleventh rib
+T_BONE_RIB_12_STRUCTURE,43993008,SCT,Bone structure of twelfth rib
+T_BONE_VERTEBRAE_C1_STRUCTURE,14806007,SCT,Bone structure of vertebrae C1
+T_BONE_VERTEBRAE_C2_STRUCTURE,39976000,SCT,Bone structure of vertebrae C2
+T_BONE_VERTEBRAE_C3_STRUCTURE,113205007,SCT,Bone structure of vertebrae C3
+T_BONE_VERTEBRAE_C4_STRUCTURE,5329002,SCT,Bone structure of vertebrae C4
+T_BONE_VERTEBRAE_C5_STRUCTURE,36978003,SCT,Bone structure of vertebrae C5
+T_BONE_VERTEBRAE_C6_STRUCTURE,36054005,SCT,Bone structure of vertebrae C6
+T_BONE_VERTEBRAE_C7_STRUCTURE,87391001,SCT,Bone structure of vertebrae C7
+T_BONE_VERTEBRAE_L1_STRUCTURE,66794005,SCT,Bone structure of vertebrae L1
+T_BONE_VERTEBRAE_L2_STRUCTURE,14293000,SCT,Bone structure of vertebrae L2
+T_BONE_VERTEBRAE_L3_STRUCTURE,36470004,SCT,Bone structure of vertebrae L3
+T_BONE_VERTEBRAE_L4_STRUCTURE,11994002,SCT,Bone structure of vertebrae L4
+T_BONE_VERTEBRAE_L5_STRUCTURE,49668003,SCT,Bone structure of vertebrae L5
+T_BONE_VERTEBRAE_T1_STRUCTURE,64864005,SCT,Bone structure of vertebrae T1
+T_BONE_VERTEBRAE_T2_STRUCTURE,53733008,SCT,Bone structure of vertebrae T2
+T_BONE_VERTEBRAE_T3_STRUCTURE,1626008,SCT,Bone structure of vertebrae T3
+T_BONE_VERTEBRAE_T4_STRUCTURE,73071006,SCT,Bone structure of vertebrae T4
+T_BONE_VERTEBRAE_T5_STRUCTURE,56401006,SCT,Bone structure of vertebrae T5
+T_BONE_VERTEBRAE_T6_STRUCTURE,45296009,SCT,Bone structure of vertebrae T6
+T_BONE_VERTEBRAE_T7_STRUCTURE,62487009,SCT,Bone structure of vertebrae T7
+T_BONE_VERTEBRAE_T8_STRUCTURE,11068009,SCT,Bone structure of vertebrae T8
+T_BONE_VERTEBRAE_T9_STRUCTURE,82687006,SCT,Bone structure of vertebrae T9
+T_BONE_VERTEBRAE_T10_STRUCTURE,7610001,SCT,Bone structure of vertebrae T10
+T_BONE_VERTEBRAE_T11_STRUCTURE,12989004,SCT,Bone structure of vertebrae T11
+T_BONE_VERTEBRAE_T12_STRUCTURE,23215003,SCT,Bone structure of vertebrae T12
