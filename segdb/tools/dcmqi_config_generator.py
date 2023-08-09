@@ -40,13 +40,15 @@ class Item:
 
 class DcmqiDsegConfigGenerator:
     
-    items: List[Item] = []
-    item_fchk: List[str] = []
+    items: List[Item]
+    item_fchk: List[str]
 
     model_name: str = 'MODEL NAME'
     body_part_examined: str = 'WHOLEBODY'
 
     def __init__(self, model_name: str, body_part_examined: str) -> None:
+        self.items = []
+        self.item_fchk = []
         self.model_name = model_name
         self.body_part_examined = body_part_examined
 
@@ -54,7 +56,7 @@ class DcmqiDsegConfigGenerator:
         item = Item(file, segment_ids, model_name)
 
         if validate and not item.validate():
-            raise Exception("Invalid segment ids: " + ', '.join(item.malformed_segment_ids))
+            raise Exception("Invalid segment ids: " + ', '.join(item.malformed_segment_ids or []))
 
         fchk = str(hash(file))
         if fchk in self.item_fchk:
