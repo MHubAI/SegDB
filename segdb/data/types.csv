@@ -35,8 +35,8 @@ T_SPLENIC_STRUCTURE,78961009,SCT,Splenic structure
 T_STOMACH_STRUCTURE,69695003,SCT,Stomach structure
 T_TRACHEAL_STRUCTURE,44567001,SCT,Tracheal structure
 T_BLADDER_STRUCTURE,89837001,SCT,Urinary bladder structure
-T_NEOPLASM_MALIGNANT_PRIMARY,86049000,SCT,"Neoplasm, malignant (primary)"
-T_ARTERY_CORONARY_CFLX_LEFT_STRUCTURE,59438005,SCT,Structure of circumflex branch of left coronary artery
+T_NEOPLASM_MALIGNANT_PRIMARY_MABNORMALITY,86049000,SCT,"Malignant neoplasm, primary (morphologic abnormality)"
+T_ARTERY_CORONARY_CFLX_LEFT_STRUCTURE,57396003,SCT,Structure of circumflex branch of left coronary artery
 T_ARTERY_CORONARY_RIGHT_STRUCTURE,13647002,SCT,Right coronary artery structure
 T_ARTERY_CORONARY_LEFT_STRUCTURE,3227004,SCT,Structure of left main coronary artery
 T_ARTERY_CORONARY_AD_LEFT_STRUCTURE,59438005,SCT,Structure of left anterior descending artery
@@ -91,3 +91,4 @@ T_BONE_VERTEBRAE_T10_STRUCTURE,7610001,SCT,Bone structure of vertebrae T10
 T_BONE_VERTEBRAE_T11_STRUCTURE,12989004,SCT,Bone structure of vertebrae T11
 T_BONE_VERTEBRAE_T12_STRUCTURE,23215003,SCT,Bone structure of vertebrae T12
 T_PROSTATIC_STRUCTURE,41216001,SCT,Prostatic structure
+T_CYST_MABNORMALITY,367643001,SCT,"Cyst (morphologic abnormality)"
