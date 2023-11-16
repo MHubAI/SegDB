@@ -40,6 +40,7 @@ T_ARTERY_CORONARY_CFLX_LEFT_STRUCTURE,57396003,SCT,Structure of circumflex branc
 T_ARTERY_CORONARY_RIGHT_STRUCTURE,13647002,SCT,Right coronary artery structure
 T_ARTERY_CORONARY_LEFT_STRUCTURE,3227004,SCT,Structure of left main coronary artery
 T_ARTERY_CORONARY_AD_LEFT_STRUCTURE,59438005,SCT,Structure of left anterior descending artery
+T_ARTERY_CORONARY_STRUCTURE,41801008,SCT,Coronary artery structure (body structure)
 T_HEART_STRUCTURE,80891009,SCT,Heart structure
 T_VALVE_AORTIC_STRUCTURE,34202007,SCT,Aortic valve structure
 T_VALVE_MITRAL_STRUCTURE,91134007,SCT,Mitral valve structure
@@ -91,4 +92,6 @@ T_BONE_VERTEBRAE_T10_STRUCTURE,7610001,SCT,Bone structure of vertebrae T10
 T_BONE_VERTEBRAE_T11_STRUCTURE,12989004,SCT,Bone structure of vertebrae T11
 T_BONE_VERTEBRAE_T12_STRUCTURE,23215003,SCT,Bone structure of vertebrae T12
 T_PROSTATIC_STRUCTURE,41216001,SCT,Prostatic structure
-T_CYST_MABNORMALITY,367643001,SCT,"Cyst (morphologic abnormality)"
+T_CYST_MABNORMALITY,367643001,SCT,Cyst (morphologic abnormality)
+T_SPINAL_CANAL_STRUCTURE,61853006,SCT,Spinal canal structure (body structure)
+T_PATHOLOGIC_CALCIFICATION_MABNORMALITY,18115005,SCT,"Pathologic calcification, calcified structure (morphologic abnormality)"
