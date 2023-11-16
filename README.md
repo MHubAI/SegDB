@@ -54,7 +54,8 @@ from segdb.tools import DcmqiDsegConfigGenerator
 
 # generate json meta generator instance
 generator = DcmqiDsegConfigGenerator(
-    model_name = 'My Model'
+    model_name = 'My Model',
+    body_part_examined = 'CHEST'
 )
 
 # add segmentation
