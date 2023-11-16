@@ -68,6 +68,7 @@ class Segment:
             self.anatomic_region_type_id = ar["anatomic_region"]
             self.anatomic_region_modifyer_id = ar["modifier"] 
             self.name = sp["name"] + ' in ' + ar["name"]
+            self.color = sp["color"]
 
     def getID(self) -> str:
         return self.id
@@ -113,16 +114,16 @@ class Segment:
         return Triplet(self.anatomic_region_modifyer_id)
 
     def print(self):
-        print("Segment ID: ", self.id)
-        print("Segment Name: ", self.name)
-        print("Segment Color: ", self.color)
-        print("Anatomic Region ID: ", self.anatomic_region_id)
-        print("Segmented Property ID: ", str(self.segmented_property_id))
-        print("Segmented Property Category: ", str(self.getSegmentedPropertyCategory()))
-        print("Segmented Property Type: ", str(self.getSegmentedPropertyType()))
-        print("Segmented Property Modifyer: ", str(self.getSegmentedPropertyModifyer()))
-        print("Anatomic Region Sequence: ", str(self.getAnatomicRegionSequence()))
-        print("Anatomic Region Modifier Sequence: ", str(self.getAnatomicRegionModifierSequence()))
+        print("Segment ID........................... ", self.id)
+        print("Segment Name......................... ", self.name)
+        print("Segment Color........................ ", self.color)
+        print("Anatomic Region ID................... ", self.anatomic_region_id)
+        print("Segmented Property ID................ ", str(self.segmented_property_id))
+        print("Segmented Property Category.......... ", str(self.getSegmentedPropertyCategory()))
+        print("Segmented Property Type.............. ", str(self.getSegmentedPropertyType()))
+        print("Segmented Property Modifyer.......... ", str(self.getSegmentedPropertyModifyer()))
+        print("Anatomic Region Sequence............. ", str(self.getAnatomicRegionSequence()))
+        print("Anatomic Region Modifier Sequence.... ", str(self.getAnatomicRegionModifierSequence()))
 
     def asJSON(self, labelID: int = 1, algorithm_name: str = ''):
                     
