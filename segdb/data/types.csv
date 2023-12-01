@@ -120,3 +120,6 @@ T_PROSTATIC_TZ_STRUCTURE,399384005,SCT,Structure of transition zone of prostate 
 T_CYST_MABNORMALITY,367643001,SCT,Cyst (morphologic abnormality)
 T_SPINAL_CANAL_STRUCTURE,61853006,SCT,Spinal canal structure (body structure)
 T_PATHOLOGIC_CALCIFICATION_MABNORMALITY,18115005,SCT,"Pathologic calcification, calcified structure (morphologic abnormality)"
+T_RENAL_VEIN_STRUCTURE,56400007,SCT,Structure of renal vein (body structure)
+T_PANCREATIC_DUCT_STRUCTURE,69930009,SCT,Pancreatic duct structure (body structure)
+T_BILE_DUCT_STRUCTURE,28273000,SCT,Bile duct structure (body structure)
