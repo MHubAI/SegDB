@@ -123,3 +123,4 @@ T_PATHOLOGIC_CALCIFICATION_MABNORMALITY,18115005,SCT,"Pathologic calcification, 
 T_RENAL_VEIN_STRUCTURE,56400007,SCT,Structure of renal vein (body structure)
 T_PANCREATIC_DUCT_STRUCTURE,69930009,SCT,Pancreatic duct structure (body structure)
 T_BILE_DUCT_STRUCTURE,28273000,SCT,Bile duct structure (body structure)
+T_ARTERIAL_STRUCTURE,51114001,SCT,Arterial structure (body structure)
