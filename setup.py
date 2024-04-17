@@ -13,7 +13,7 @@ def read(fname):
 
 setuptools.setup(
     name = "segdb",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Leonard Nürnberg",
     author_email = "lnuernberg@bwh.harvard.edu",
     description = ("Database for uniform body segmentation."),
@@ -22,7 +22,11 @@ setuptools.setup(
     url = "https://github.com/MHubAI/SegDB",
     packages=setuptools.find_packages(),
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     package_data={'': ['data/*.csv']},
+    install_requires=[
+        "pandas" # pandas==1.5.2
+    ],
     include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",
