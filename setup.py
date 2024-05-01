@@ -13,7 +13,7 @@ def read(fname):
 
 setuptools.setup(
     name = "segdb",
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Leonard Nürnberg",
     author_email = "lnuernberg@bwh.harvard.edu",
     description = ("Database for uniform body segmentation."),
