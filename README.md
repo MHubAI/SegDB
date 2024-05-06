@@ -61,7 +61,7 @@ generator = DcmqiDsegConfigGenerator(
 # add segmentation
 generator.addItem(
     file = 'path/to/segmentation.nii.gz',
-    segment_ids = 'HEART',
+    segment_ids = ['HEART'],
     model_name = 'My Model'
 )
 
