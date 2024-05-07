@@ -54,14 +54,14 @@ class Triplet:
         self.meaning = str(data['CodeMeaning'])
 
     @classmethod
-    def getByCode(cls, code: int, coding_scheme_designator: str = "SCT") -> 'Triplet':
+    def getByCode(cls, code: str, coding_scheme_designator: str = "SCT") -> 'Triplet':
         triplet = cls.findByCode(code, coding_scheme_designator)
         if triplet is None:
             raise ValueError(f"Triplet with code '{code}' and coding scheme designator '{coding_scheme_designator}' not found.")
         return triplet
 
     @classmethod
-    def findByCode(cls, code: int, coding_scheme_designator: str = "SCT") -> Optional['Triplet']:
+    def findByCode(cls, code: str, coding_scheme_designator: str = "SCT") -> Optional['Triplet']:
         
         # look into each table for code and coding scheme designator
         for table in [db.types, db.categories, db.modifiers]:

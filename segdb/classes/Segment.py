@@ -331,30 +331,30 @@ class Segment:
     @classmethod
     def fromJSON(cls, json: dict) -> 'Segment':
         
-        segmented_property_category_code = int(json['SegmentedPropertyCategoryCodeSequence']['CodeValue'])
+        segmented_property_category_code = str(json['SegmentedPropertyCategoryCodeSequence']['CodeValue'])
         segmented_property_category_scheme = json['SegmentedPropertyCategoryCodeSequence']['CodingSchemeDesignator']
         segmented_property_category_triplet = Triplet.getByCode(segmented_property_category_code, segmented_property_category_scheme)
         
-        segmented_property_type_code = int(json['SegmentedPropertyTypeCodeSequence']['CodeValue'])
+        segmented_property_type_code = str(json['SegmentedPropertyTypeCodeSequence']['CodeValue'])
         segmented_property_type_scheme = json['SegmentedPropertyTypeCodeSequence']['CodingSchemeDesignator']
         segmented_property_type_triplet = Triplet.getByCode(segmented_property_type_code, segmented_property_type_scheme)
         
         if segmented_property_modifier := json.get('SegmentedPropertyTypeModifierCodeSequence', None):
-            segmented_property_modifier_code = int(segmented_property_modifier['CodeValue'] )
+            segmented_property_modifier_code = str(segmented_property_modifier['CodeValue'] )
             segmented_property_modifier_scheme = segmented_property_modifier['CodingSchemeDesignator'] 
             segmented_property_modifier_tiplet = Triplet.getByCode(segmented_property_modifier_code, segmented_property_modifier_scheme) 
         else:
             segmented_property_modifier_tiplet = None
         
         if anatomic_region_type := json.get('AnatomicRegionSequence', None):
-            anatomic_region_type_code = int(anatomic_region_type['CodeValue'])
+            anatomic_region_type_code = str(anatomic_region_type['CodeValue'])
             anatomic_region_type_scheme = anatomic_region_type['CodingSchemeDesignator']
             anatomic_region_type_tiplet = Triplet.getByCode(anatomic_region_type_code, anatomic_region_type_scheme)
         else:
             anatomic_region_type_tiplet = None
             
         if anatomic_region_modifier := json.get('AnatomicRegionModifierSequence', None):
-            anatomic_region_modifier_code = int(anatomic_region_modifier['CodeValue'])
+            anatomic_region_modifier_code = str(anatomic_region_modifier['CodeValue'])
             anatomic_region_modifier_scheme = anatomic_region_modifier['CodingSchemeDesignator']
             anatomic_region_modifier_tiplet = Triplet.getByCode(anatomic_region_modifier_code, anatomic_region_modifier_scheme)
         else:
