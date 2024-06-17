@@ -1,3 +1,4 @@
 id,CodeValue,CodingSchemeDesignator,CodeMeaning
 M_LEFT,7771000,SCT,Left
 M_RIGHT,24028007,SCT,Right
+M_RIGHT_AND_LEFT,51440002,SCT,Right and left

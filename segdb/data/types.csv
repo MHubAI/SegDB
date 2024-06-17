@@ -21,7 +21,7 @@ T_INFERIOR_VENA_CAVA_STRUCTURE,64131007,SCT,Inferior vena cava structure
 T_SUPERIOR_VENA_CAVA_STRUCTURE,48345005,SCT,Superior vena cava structure
 T_KIDNEY_STRUCTURE,64033007,SCT,Kidney structure
 T_LIVER_STRUCTURE,10200004,SCT,Liver structure
-T_LUNG,39607008,SCT,Structure of lung
+T_LUNG,39607008,SCT,Lung structure
 T_LUNG_LOBE_LOWER_STRUCTURE,90572001,SCT,Structure of lower lobe of lung
 T_LUNG_LOBE_MIDDLE_RIGHT_STRUCTURE,72481006,SCT,Structure of middle lobe of right lung
 T_LUNG_LOBE_UPPER_STRUCTURE,45653009,SCT,Structure of upper lobe of lung
@@ -126,3 +126,4 @@ T_BILE_DUCT_STRUCTURE,28273000,SCT,Bile duct structure (body structure)
 T_ARTERIAL_STRUCTURE,51114001,SCT,Arterial structure (body structure)
 T_NODULE_MABNORMALITY,27925004,SCT,Nodule (morphologic abnormality)
 T_TUMOR_FDG_AVID,C168968,NCIt,FDG-Avid Tumor
+T_BREAST_STRUCTURE,76752008,SCT,Breast structure (body structure)
