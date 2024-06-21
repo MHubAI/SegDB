@@ -16,9 +16,10 @@ from typing import Optional
 
 class Triplet:
 
-    code: str
-    scheme_designator: str
-    meaning: str
+    _custom_triplets = {}
+    # code: str
+    # scheme_designator: str
+    # meaning: str
     
     @classmethod
     def _getLookupTable(cls, id: str) -> pd.DataFrame:
@@ -41,17 +42,38 @@ class Triplet:
 
     def __init__(self, id: str) -> None:
         
-        # get loopup table
-        lookup_db = self._getLookupTable(id)
+        # check if custom triplet    
+        if id in self._custom_triplets:
+            # load custom triplet
+            data = self._custom_triplets[id]
+        else:       
+            # get loopup table
+            lookup_db = self._getLookupTable(id)
 
-        # lookup by id
-        data = lookup_db.loc[id]
+            # lookup by id
+            data = lookup_db.loc[id]
 
         # assign properties
         self.id = id
         self.code = str(data['CodeValue'])
         self.scheme_designator = str(data['CodingSchemeDesignator'])
         self.meaning = str(data['CodeMeaning'])
+
+    @classmethod
+    def register(cls, id: str, code: str = "", meaning: Optional[str] = None, scheme_designator: str = "99SEGDB",  overwrite: bool = False):
+        #('SADC123','99SMITH','Smith Diffusion Model')
+        if id in cls._custom_triplets and not overwrite:
+            raise ValueError(f"Triplet with id '{id}' already exists.")
+        
+        if meaning is None:
+            meaning = id
+
+        cls._custom_triplets[id] = {
+            'id': id,
+            "CodeValue": code,
+            "CodingSchemeDesignator": scheme_designator,
+            "CodeMeaning": meaning
+        }
 
     @classmethod
     def getByCode(cls, code: str, coding_scheme_designator: str = "SCT") -> 'Triplet':
@@ -75,3 +97,5 @@ class Triplet:
     def __str__(self) -> str:
         return f"{self.id}:{self.scheme_designator}:{self.code}:{self.meaning}"
     
+    
+Triplet.register("UNKNOWN", code="UNKNOWN")

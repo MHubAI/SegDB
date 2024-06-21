@@ -9,7 +9,7 @@ Email:  leonard.nuernberg@maastrichtuniversity.nl
 -------------------------------------------------
 """
 
-from typing import Optional, List, Union
+from typing import Optional, List, Union, Tuple
 from .DB import db
 from .Triplet import Triplet
 from .Color import Color
@@ -17,22 +17,46 @@ import pandas as pd
 
 class Segment:
 
-    # segment id
-    id: str
-    anatomic_region_id: str
-    segmented_property_id: Optional[str]
+    # # segment id
+    # id: str
+    # anatomic_region_id: str
+    # segmented_property_id: Optional[str]
 
-    # triplet id
-    segmented_property_category_id: str
-    segmented_property_type_id: str
-    segmented_property_modifyer_id: Optional[str]
-    segmented_property_name: str
-    anatomic_region_type_id: Optional[str]
-    anatomic_region_modifyer_id: Optional[str]
-    anatomic_region_name: Optional[str]
+    # # triplet id
+    # segmented_property_category_id: str
+    # segmented_property_type_id: str
+    # segmented_property_modifyer_id: Optional[str]
+    # segmented_property_name: str
+    # anatomic_region_type_id: Optional[str]
+    # anatomic_region_modifyer_id: Optional[str]
+    # anatomic_region_name: Optional[str]
     
-    # meta
-    color: Optional[str]
+    # # meta
+    # color: Optional[str]
+
+    _custom_segments = {}
+
+    @classmethod    
+    def register(cls, id: str, name: Optional[str] = None, category: Union[str, Triplet] = "UNKNOWN", type: Union[str, Triplet] = "UNKNOWN", modifier: Optional[Union[str, Triplet]] = None, color: Tuple[int, int, int] = (255, 255, 255)):
+        
+        # use id as name if no name provided
+        if name is None:
+            name = id
+            
+        # get ids
+        category_id = category.id if isinstance(category, Triplet) else category
+        type_id = type.id if isinstance(type, Triplet) else type
+        modifier_id = None if modifier is None else modifier.id if isinstance(modifier, Triplet) else modifier
+            
+        # register segment
+        cls._custom_segments[id] = {
+            'id': id,
+            'name': name,
+            'category': category_id,
+            'anatomic_region': type_id,
+            'modifier': modifier_id,
+            'color': ",".join(map(str, color))
+        }        
 
     @classmethod
     def getByID(cls, id: str) -> 'Segment':
@@ -151,13 +175,22 @@ class Segment:
         self.anatomic_region_id = id_split[0]
         self.segmented_property_id = id_split[1] if len(id_split) > 1 else None
 
-        # lookup
-        ar = db.segmentations.loc[self.anatomic_region_id]
-        sp = db.segmentations.loc[self.segmented_property_id] if self.segmented_property_id is not None else None
-
-        # replace NaN with None
-        ar = ar.where(pd.notnull(ar), None)
-        sp = sp.where(pd.notnull(sp), None) if sp is not None else None
+        # lookup and replace NaN with None when loaded from database
+        # anatomical region (mandatory)
+        if self.anatomic_region_id in Segment._custom_segments:
+            ar = Segment._custom_segments[self.anatomic_region_id]
+        else:
+            ar = db.segmentations.loc[self.anatomic_region_id]
+            ar = ar.where(pd.notnull(ar), None)
+           
+        # segment property (optional)
+        if self.segmented_property_id is None:
+            sp = None 
+        elif self.segmented_property_id in Segment._custom_segments:
+            sp = Segment._custom_segments[self.segmented_property_id]
+        else:
+            sp = db.segmentations.loc[self.segmented_property_id]
+            sp = sp.where(pd.notnull(sp), None)
         
         def ostr(s) -> Optional[str]:
             return None if s is None else str(s)
@@ -214,7 +247,7 @@ class Segment:
             segmented_property (Segment): A segment (e.g. <This-Segment>+<Segmented-Property>)
         """
 
-        self.id = self.anatomic_region_id + '+' + (segmented_property.anatomic_region_id if segmented_property.anatomic_region_id is not None else segmented_property.segmented_property_id)
+        self.id = self.anatomic_region_id + '+' + (segmented_property.segmented_property_id if segmented_property.segmented_property_id is not None else segmented_property.anatomic_region_id)
         self.segmented_property_id = segmented_property.id
         self.anatomic_region_type_id = self.segmented_property_type_id
         self.anatomic_region_modifyer_id = self.segmented_property_modifyer_id
