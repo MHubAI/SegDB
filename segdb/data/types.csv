@@ -35,7 +35,9 @@ T_SPLENIC_STRUCTURE,78961009,SCT,Splenic structure
 T_STOMACH_STRUCTURE,69695003,SCT,Stomach structure
 T_TRACHEAL_STRUCTURE,44567001,SCT,Tracheal structure
 T_BLADDER_STRUCTURE,89837001,SCT,Urinary bladder structure
+T_NEOPLASM_MABNORMALITY,108369006,SCT,Neoplasm (morphologic abnormality)
 T_NEOPLASM_MALIGNANT_PRIMARY_MABNORMALITY,86049000,SCT,"Malignant neoplasm, primary (morphologic abnormality)"
+T_NEOPLASM_METASTATIC_MABNORMALITY,14799000,SCT,"Neoplasm, metastatic (morphologic abnormality)"
 T_ARTERY_CORONARY_CFLX_LEFT_STRUCTURE,57396003,SCT,Structure of circumflex branch of left coronary artery
 T_ARTERY_CORONARY_RIGHT_STRUCTURE,13647002,SCT,Right coronary artery structure
 T_ARTERY_CORONARY_LEFT_STRUCTURE,3227004,SCT,Structure of left main coronary artery
@@ -127,3 +129,9 @@ T_ARTERIAL_STRUCTURE,51114001,SCT,Arterial structure (body structure)
 T_NODULE_MABNORMALITY,27925004,SCT,Nodule (morphologic abnormality)
 T_TUMOR_FDG_AVID,C168968,NCIt,FDG-Avid Tumor
 T_BREAST_STRUCTURE,76752008,SCT,Breast structure (body structure)
+T_BREAST_FIBROGLANDULAR_STRUCTURE,1342375003,SCT,Structure of fibroglandular tissue of breast (body structure)
+T_STRUCTURE_OF_VERTREBRAL_COLUMN,421060004,SCT,Structure of vertebral column (body structure)
+T_BONE_STRUCTURE_OF_SPINE,51282000,SCT,Bone structure of spine (body structure)
+T_EDEMA_MABNORMALITY,79654002,SCT,Edema (morphologic abnormality)
+T_NECROSIS_MABNORMALITY,6574001,SCT,Necrosis (morphologic abnormality)
+T_ENHANCING_LESION_MABNORMALITY,C113842,NCIt,Enhancing Lesion
