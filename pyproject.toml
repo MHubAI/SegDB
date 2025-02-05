@@ -1,6 +1,6 @@
 [project]
 name = "segdb"
-version = "0.0.3"
+version = "0.0.4"
 description = "Database for uniform body segmentation."
 readme = "README.md"
 license = { text = "MIT" }
